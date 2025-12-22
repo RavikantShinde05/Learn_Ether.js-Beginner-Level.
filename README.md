@@ -68,7 +68,7 @@ await provider.send("eth_requestAccounts", []);
 const signer = provider.getSigner();
 ```
 
-## Connecting to the Ethereum Network with (RPC):
+## Connecting to the Ethereum Network (RPC):
 
 ```
 const provider = new ethers.providers.JsonRpcProvider();
