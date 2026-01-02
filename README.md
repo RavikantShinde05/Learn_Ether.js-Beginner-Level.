@@ -77,6 +77,7 @@ const signer = provider.getSigner();
 ```
 
 
+# the Complete syllabus for Ethers.js:
 
 ## Chapter 1: Getting Started and Foundational Concepts
 This chapter focuses on setting up the library and understanding the core terminology of the Ethereum ecosystem and the ethers.js library.
