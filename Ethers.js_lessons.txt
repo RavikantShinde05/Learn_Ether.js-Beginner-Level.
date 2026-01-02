@@ -1,3 +1,5 @@
+THE COMPLETE SYLLABUS FOR ETHERS.JS
+
 The structure of the ethers v5.7 documentation can be organized into the following chapters to facilitate easier learning and understanding of concepts and commands:
 Chapter 1: Getting Started and Foundational Concepts:
 This chapter focuses on setting up the library and understanding the core terminology of the Ethereum ecosystem and the ethers.js library.
@@ -40,6 +42,6 @@ This chapter covers specialized tools, integrations, and experimental features.
 • Command Line Interfaces: Use of the Sandbox Utility and Assembler tools.
 Chapter 8: Maintenance, Migration, and Resources:
 This final section offers guidance on integrating the library into various environments and upgrading from previous versions.
-• Cookbook: Practical examples, including specific instructions for React Native (and ilk).
+• Cookbook: Practical examples, including specific instructions for React Native.
 • Migration Guide: Details for moving from Web3.js and Ethers v4 to Ethers v5.
 • Testing: Information on Test Suites and Supported Platforms.
