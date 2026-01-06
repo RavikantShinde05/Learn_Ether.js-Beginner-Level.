@@ -1,0 +1,68 @@
+What is the primary goal of the ethers.js library?,To be a complete and compact library for interacting with the Ethereum Blockchain and its ecosystem.
+"According to ethers.js security features, where are private keys intended to be kept?","They are kept in the client, ensuring they remain safe and sound."
+What standard for mnemonic phrases does ethers.js support for importing and exporting HD Wallets?,"It supports BIP 39 mnemonic phrases, also known as 12-word backup phrases."
+"Ethers.js meta-classes can create JavaScript objects from any contract ABI, including ABIv2 and _____ ABI.",Human-Readable
+How does ethers.js treat Ethereum Naming Service (ENS) names in relation to addresses?,ENS names are treated as first-class citizens and can be used anywhere an Ethereum address is required.
+What is the approximate compressed size of the ethers.js library?,"The library is tiny, at approximately 88kb compressed."
+"What programming language is ethers.js fully ready for, including definition files and full source code?",TypeScript.
+Under which open-source license is ethers.js and all of its dependencies released?,The MIT License.
+What is the general term for an ethers.js object that provides a read-only connection to the Ethereum blockchain?,A Provider.
+What is the general term for an ethers.js object that can sign messages and transactions to authorize actions on the blockchain?,A Signer.
+Which specific Provider connects to an Ethereum node over a JSON-RPC interface?,JsonRpcProvider.
+Name the ethers.js provider that allows interaction with the blockchain via the Etherscan API.,EtherscanProvider.
+Which ethers.js provider is specifically designed to connect to the Infura platform?,InfuraProvider.
+Which provider in ethers.js is used to connect to the Alchemy platform?,AlchemyProvider.
+"What provider in ethers.js allows you to wrap an existing Web3-compatible provider, such as MetaMask's `window.ethereum`?",Web3Provider.
+"For persistent, stateful connections to an Ethereum node, which provider should be used?",WebSocketProvider.
+Which ethers.js provider offers resilience by querying multiple providers and using the first one to respond?,FallbackProvider.
+The `Signer` class in ethers.js is an abstract class that is subclassed by which concrete class to represent a standard Ethereum account?,The Wallet class.
+What special type of Signer in ethers.js can be used for read-only operations that require a Signer object but will throw an error if a write operation is attempted?,VoidSigner.
+"In ethers.js, what class is used to represent and interact with an already-deployed smart contract?",The Contract class.
+What ethers.js class is used specifically for the purpose of deploying a new smart contract to the blockchain?,The ContractFactory class.
+What does the `AbiCoder` utility in ethers.js provide?,It provides methods for encoding and decoding data according to the ABI specification.
+"Besides the standard Solidity JSON ABI, what simplified format does ethers.js support for defining contract interfaces?",Human-Readable ABI.
+What utility class in ethers.js is used to parse a contract ABI and provides methods for encoding and decoding function calls and event data?,The Interface class.
+"To handle arbitrarily large integer values safely, which utility class must be used in ethers.js?",BigNumber.
+What type of utility functions would you use in ethers.js to convert data between hexstrings and byte arrays?,Byte Manipulation utilities.
+"The _____ utility in ethers.js is used for creating instances of fixed-point numbers, which are useful for financial calculations.",FixedNumber
+"Which section of ethers.js utilities contains functions for `keccak256`, `sha256`, and other Solidity-compatible hashing algorithms?",The Hashing Algorithms section.
+What does the `HDNode` utility in ethers.js help manage?,It helps manage Hierarchical Deterministic (HD) Wallets and their derived keys.
+What utility is available in ethers.js for converting between standard UTF-8 strings and their 32-byte hex string representation?,Bytes32String.
+"What utility in ethers.js provides functions for parsing, formatting, and converting between different denominations of Ether (e.g., wei, gwei, ether)?",The Units utility within Display Logic and Input.
+"Which encoding format, often used in Ethereum for serializing objects, is supported by ethers.js encoding utilities?",Recursive-Length Prefix (RLP).
+The _____ class in ethers.js is used to integrate with Ledger hardware wallets.,LedgerSigner
+Ethers.js provides a migration guide specifically for developers transitioning from which other popular JavaScript library?,Web3.js.
+"A specific type in ethers.js, _____, is used to refer to a block by its number or by tags like 'latest' or 'pending'.",BlockTag
+What ethers.js type represents the details of a specific block on the blockchain?,The Block type.
+"What type is used in ethers.js to represent information about network transaction fees, such as gas price and max fees?",FeeData.
+What is a `Fragment` in the context of the ethers.js ABI utilities?,"A `Fragment` describes a single component of a contract's ABI, such as a function, event, or error."
+What type of fragment describes a contract's constructor function?,ConstructorFragment.
+What type of fragment describes a contract function that can be called?,FunctionFragment.
+What type of fragment describes an event that a contract can emit?,EventFragment.
+The `ParamType` object in ethers.js is used to describe what?,"It describes the properties of a single parameter within a function, event, or error fragment."
+What is the purpose of the `Signing Key` utility in ethers.js?,It provides functions for managing and using elliptic curve private and public keys for signing.
+"Ethers.js provides utilities to interact with various languages for mnemonic phrases, which are managed by what type of object?",A Wordlist object.
+What is the name of the experimental ethers.js class that helps manage transaction nonces for an account?,NonceManager.
+What type of provider connects to an Ethereum node that is running on the same machine via an IPC file?,IpcProvider.
+Which ethers.js provider allows batching multiple JSON-RPC requests into a single network request?,JsonRpcBatchProvider.
+What is the purpose of the Provider's 'Network Status Methods'?,"To query the current state of the network, such as block number, gas price, and network details."
+What does the `Logger` utility in ethers.js allow a developer to do?,"It allows for controlling the library's logging output, including setting log levels and handling errors."
+What is the purpose of the `Property Utilities` in ethers.js?,They help in defining and managing properties on objects in a secure and consistent manner.
+Which section of the ethers.js utilities would you use for functions related to Base58 and Base64 encoding?,Encoding Utilities.
+Ethers.js includes a command-line utility for working with its custom assembly language. What is this tool called?,Assembler.
+Which command-line utility in ethers.js can be used to resolve or lookup information about ENS names?,The Ethereum Naming Service (ENS) CLI utility.
+What is the 'Cookbook' section of the ethers.js documentation for?,"It provides practical recipes and code examples for common tasks, such as usage with React Native."
+The ethers.js documentation provides specific guidance for developers working in what mobile development environment?,React Native (and ilk).
+What feature of ethers.js allows for the creation of JavaScript objects directly from a contract's Application Binary Interface (ABI)?,Meta-classes.
+"The `Interface` class in ethers.js can be used to get the unique identifier for a function, which is known as its _____.",Signature Hash (or sighash).
+"For events, the `Interface` class in ethers.js can compute a unique identifier used for filtering logs. What is this identifier called?",The Topic Hash.
+The _____ signer in ethers.js gets its ability to sign from an underlying JSON-RPC node that manages the private keys.,JsonRpcSigner
+What is an `Access List` in the context of an Ethereum transaction as defined in ethers.js types?,"An `Access List` is a list of addresses and storage keys that a transaction plans to access, reducing gas costs for those operations."
+What utility in ethers.js would you use to compute a contract address before it is deployed?,"The Addresses utility, which includes functions for contract address derivation."
+Ethers.js provides an experimental bridge to conform to what common Ethereum provider specification?,EIP-1193.
+What is the name of the experimental wallet in ethers.js that derives keys from a username and password?,BrainWallet.
+Which provider in ethers.js is used to connect to the Cloudflare Ethereum Gateway?,CloudflareProvider.
+The `StaticJsonRpcProvider` is an optimized version of `JsonRpcProvider` that assumes what about the network?,"It assumes the network (e.g., chainId) will never change, preventing it from being repeatedly checked."
+Which utility provides functions to get random bytes from a cryptographically secure source?,"The Random Bytes utility, found within Byte Manipulation."
+What is the purpose of the 'Meta-Class Filters' on an ethers.js `Contract` object?,They provide a simplified way to create filters for specific events defined in the contract's ABI.
+Ethers.js provides constants for common values like the zero address and max `uint256`. In which utility module are these found?,The Constants utility.
