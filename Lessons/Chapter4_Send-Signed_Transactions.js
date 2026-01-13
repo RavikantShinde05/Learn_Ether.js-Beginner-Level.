@@ -9,26 +9,31 @@ const account2 = '' // Your account address 2
 const privateKey1 = '' // Private key of account 1
 const wallet = new ethers.Wallet(privateKey1, provider)
 
-const main = async () => {
+const main = async () => 
+    //get balance info first from both account
     const senderBalanceBefore = await provider.getBalance(account1)
     const recieverBalanceBefore = await provider.getBalance(account2)
 
+    //convert all the balance into Ethers format easy to understand
     console.log(`\nSender balance before: ${ethers.utils.formatEther(senderBalanceBefore)}`)
     console.log(`reciever balance before: ${ethers.utils.formatEther(recieverBalanceBefore)}\n`)
 
     const tx = await wallet.sendTransaction({
         to: account2,
-        value: ethers.utils.parseEther("0.025")
+        value: ethers.utils.parseEther("0.025") // convert the balance into BigNumber again
     })
 
     await tx.wait()
-    console.log(tx)
+    console.log(tx) // console the tx transaction info 
 
+    //get the current balance
     const senderBalanceAfter = await provider.getBalance(account1)
     const recieverBalanceAfter = await provider.getBalance(account2)
 
+    // now console the balance after transaction.
     console.log(`\nSender balance after: ${ethers.utils.formatEther(senderBalanceAfter)}`)
     console.log(`reciever balance after: ${ethers.utils.formatEther(recieverBalanceAfter)}\n`)
 }
 
-main()
+main();
+
