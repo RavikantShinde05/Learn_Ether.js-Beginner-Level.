@@ -1,32 +1,32 @@
-const { ethers } = require("ethers");
+import { ethers } from "ethers";
 
-const INFURA_ID = ''
-const provider = new ethers.providers.JsonRpcProvider(`https://mainnet.infura.io/v3/${INFURA_ID}`)
+const address = '';// Dai Contract address
+const Contract_ABI = [];
+const provider = new ethers.providers.web3Provider(``);
+// provider or signer
+const contract = new ethers.Contract(address, Contract_ABI, provider); 
 
-const ERC20_ABI = [
-    "function name() view returns (string)",
-    "function symbol() view returns (string)",
-    "function totalSupply() view returns (uint256)",
-    "function balanceOf(address) view returns (uint)",
-];
 
-const address = '0x6B175474E89094C44Da98b954EedeAC495271d0F' // DAI Contract
-const contract = new ethers.Contract(address, ERC20_ABI, provider)
+const main = async ()=> {
 
-const main = async () => {
-    const name = await contract.name()
-    const symbol = await contract.symbol()
-    const totalSupply = await contract.totalSupply()
+const token_name =  await contract.name();
+const symBol = await contract.symbol();
+const totalSupply = await contract.totalSupply();
 
-    console.log(`\nReading from ${address}\n`)
-    console.log(`Name: ${name}`)
-    console.log(`Symbol: ${symbol}`)
-    console.log(`Total Supply: ${totalSupply}\n`)
+console.log(address);
+console.log(token_name);
+console.log(symBol);
+console.log(totalSupply);
 
-    const balance = await contract.balanceOf('0x6c6Bc977E13Df9b0de53b251522280BB72383700')
+const balance = await contract.balanceof('Random address');
+console.log("this the balance of Random Address in BigNumber", balance);
 
-    console.log(`Balance Returned: ${balance}`)
-    console.log(`Balance Formatted: ${ethers.utils.formatEther(balance)}\n`)
+// to change it into ethers use this
+const balance_Eth = ethers.utils.formatEther(balance)
+console.log("this is the balance in Eth", balance_Eth);
+
+const weiBalanceconvert = ethers.utils.parseEther(balance_Eth)
+console.log("this is again in wei or BigNumber",weiBalanceconvert);
 }
 
-main()
+main();
