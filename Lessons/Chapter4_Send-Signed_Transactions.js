@@ -37,3 +37,25 @@ const main = async () =>
 
 main();
 
+
+
+// this is the main function which helps us to sign and send, the transaction and ether respectively.
+// cosnt provider = new ethers.providers.JsonRpcProvider(``);
+// const address1="";
+// const address2= "";
+
+// const privatekey1 = ""
+// const wallet = new ethers.wallet(privatekey1, provider);
+
+// const main = async ()=> {
+
+//     const tx = await wallet.sendTransaction({
+//         to:account2,
+//         value: ethers.utils.parseEther("0.025") //"this value is in ether"
+//     });
+// };
+
+// await tx.wait();
+// console.log(tx)
+
+// main()
